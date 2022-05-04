@@ -1,0 +1,17 @@
+{
+  "name": "subgraph",
+  "license": "MIT",
+  "scripts": {
+    "compile": "graph codegen && graph build",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ volodymyrzolotukhin/dexe",
+    "create-local": "graph create --node http://localhost:8020/ volodymyrzolotukhin/dexe",
+    "remove-local": "graph remove --node http://localhost:8020/ volodymyrzolotukhin/dexe",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 volodymyrzolotukhin/dexe"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.23.1",
+    "@graphprotocol/graph-ts": "0.23.1"
+  }
+}
