@@ -1,0 +1,17 @@
+{
+  "name": "subgraph",
+  "license": "MIT",
+  "scripts": {
+    "compile": "graph codegen && graph build",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
+    "create-local": "graph create --node http://localhost:8020/ $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
+    "remove-local": "graph remove --node http://localhost:8020/ $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 $(grep PROJECT_NAME .env | cut -d '\"' -f2)"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.23.1",
+    "@graphprotocol/graph-ts": "0.23.1"
+  }
+}
