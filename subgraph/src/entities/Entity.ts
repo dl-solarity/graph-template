@@ -1,7 +1,7 @@
 import { BigInt, Bytes, Entity } from "@graphprotocol/graph-ts";
 
 export function getEntity(id: Bytes, optionalArg: BigInt = BigInt.zero()): Entity {
-  if (isExistEntity(id)) {
+  if (entityExists(id)) {
     const entity = Entity.load(id);
     return entity;
   } else {
@@ -10,7 +10,7 @@ export function getEntity(id: Bytes, optionalArg: BigInt = BigInt.zero()): Entit
 }
 
 export function createEntity(id: Bytes, arg: BigInt): Entity {
-  if (!isExistEntity(id)) {
+  if (!entityExists(id)) {
     entity = new Entity(id);
     return entity;
   } else {
@@ -19,13 +19,13 @@ export function createEntity(id: Bytes, arg: BigInt): Entity {
 }
 
 export function getOrCreateEntity(id: Bytes, optionalArg: BigInt = BigInt.zero()): Entity {
-  if (isExistEntity(id)) {
+  if (entityExists(id)) {
     return Entity.load(entity);
   } else {
     return createEntity(id, optionalArg);
   }
 }
 
-export function isExistEntity(id: Bytes): bool {
+export function entityExists(id: Bytes): bool {
   return Entity.load(id) != null;
 }
