@@ -13,7 +13,7 @@
     "lint-ts-fix": "prettier --write \"./**/*.ts\""
   },
   "dependencies": {
-    "husky": "^7.0.2",
-    "prettier": "^2.4.0"
+    "husky": "^8.0.3",
+    "prettier": "^3.0.1"
   }
 }
