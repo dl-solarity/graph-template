@@ -6,3 +6,6 @@ insert_final_newline = true
 [*.ts]
 indent_size = 2
 max_line_length = 120
+[*.graphql]
+indent_size = 2
+max_line_length = 120
