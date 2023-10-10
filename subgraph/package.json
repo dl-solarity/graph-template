@@ -5,7 +5,9 @@
     "compile": "graph codegen && graph build",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
+    "deploy": "graph deploy $(grep PROJECT_NAME .env | cut -d '\"' -f2) --network $NETWORK",
+    "depoly-goerli": "NETWORK=goerli npm run deploy",
+    "deploy-chapel": "NETWORK=chapel npm run deploy",
     "create-local": "graph create --node http://localhost:8020/ $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
     "remove-local": "graph remove --node http://localhost:8020/ $(grep PROJECT_NAME .env | cut -d '\"' -f2)",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 $(grep PROJECT_NAME .env | cut -d '\"' -f2)"
