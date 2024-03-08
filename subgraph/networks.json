@@ -1,0 +1,14 @@
+{
+  "goerli": {
+    "dataSourceName": {
+      "address": "0x0...",
+      "startBlock": 122
+    }
+  },
+  "chapel": {
+    "dataSourceName": {
+      "address": "0x0...",
+      "startBlock": 122
+    }
+  }
+}
