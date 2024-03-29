@@ -8,5 +8,5 @@ The root of the repository is just a wrapper around the actual subgraphs. The wr
 
 You will find the dummy template subgraph implementation in the `subgraph` directory. You may either modify the code there or create new directories for new subgraphs if the project requires more than one subgraph to be implemented.
 
-> [!NOTICE]
+> [!NOTE]
 > Each subgraph has its own deployment configs, double check them before publishing
