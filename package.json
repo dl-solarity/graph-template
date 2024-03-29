@@ -1,11 +1,10 @@
 {
   "name": "thegraph-template",
-  "version": "1.0.0",
   "license": "MIT",
   "author": "Distributed Lab",
   "description": "",
   "scripts": {
-    "prepare": "npx husky",
+    "prepare": "husky",
     "lint-fix": "npm run lint-ts-fix && npm run lint-ql-fix && npm run lint-json-fix && npm run lint-yaml-fix",
     "lint-json-fix": "prettier --write \"./[a-zA-Z0-9.]+(?!-lock).json\"",
     "lint-yaml-fix": "prettier --write \"./**/*.yaml\"",
